@@ -861,8 +861,8 @@
     {
       "path": "README.md",
       "verified_snapshot_sha256": "be7dbc996a3e52ffe1da37ad9a846281866b8064dcbd6d3dbe022b47ed5a1cfb",
-      "current_sha256": "14ebb276b7cf39a6bd802747131ed2cfa51122b377dff35d0ad318688d10f050",
-      "change": "User-requested exposition link and introductory applications wording; mathematical sources and executable validation unchanged"
+      "current_sha256": "c83cd34c88a8364fd321e3c793f3a9a6b7135953debd8859fd83a5a76e8f2b0b",
+      "change": "User-requested exposition link, introductory applications wording, and explanation of direct NK inheritance; mathematical sources and executable validation unchanged"
     }
   ],
   "source_fingerprint_policy": "source_files identifies the tested snapshot; documentation_updates_after_verification records the only later source-file changes. Execution/review records are excluded as stated."
