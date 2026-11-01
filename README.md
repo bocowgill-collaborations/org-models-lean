@@ -1,10 +1,11 @@
 # Organizational Models in Lean
 
-A proof of concept for a community-developed library that specifies organizational
-models, proves their properties, and makes their relationships explicit—in the
-spirit of [mathlib](https://github.com/leanprover-community/mathlib4),
+A proof of concept for a community-developed library that specifies formal
+organizational models in [Lean](https://lean-lang.org/), formally verifies their
+properties, and makes their relationships explicit—in the spirit of
+[mathlib](https://github.com/leanprover-community/mathlib4),
 [cslib](https://github.com/leanprover/cslib),
-[Physlib](https://github.com/leanprover-community/physlib), and
+[physicslib](https://github.com/leanprover-community/physlib), and
 [MathEconLib](https://github.com/matheconlib/matheconlib).
 
 The prototype studies **NK quality landscapes**. Its canonical representation is

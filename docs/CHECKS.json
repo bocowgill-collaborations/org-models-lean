@@ -861,8 +861,8 @@
     {
       "path": "README.md",
       "verified_snapshot_sha256": "be7dbc996a3e52ffe1da37ad9a846281866b8064dcbd6d3dbe022b47ed5a1cfb",
-      "current_sha256": "c3884e6a9a5fcfa14bdc603b64f4381f6e95d283bb504903eae96927c0998710",
-      "change": "User-requested project and paper links, introductory applications wording, and clearer inheritance descriptions; mathematical sources and executable validation unchanged"
+      "current_sha256": "1e73a0af15b5af38af81530cbf0a454734440ae0d98f580ef2c765c075ebbbac",
+      "change": "User-requested opening description, Lean/project/paper links, introductory applications wording, and clearer inheritance descriptions; mathematical sources and executable validation unchanged"
     }
   ],
   "source_fingerprint_policy": "source_files identifies the tested snapshot; documentation_updates_after_verification records the only later source-file changes. Execution/review records are excluded as stated."
