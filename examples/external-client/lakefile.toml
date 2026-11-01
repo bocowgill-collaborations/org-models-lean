@@ -1,0 +1,15 @@
+name = "orglib_client_example"
+version = "0.1.0"
+defaultTargets = ["Client"]
+packagesDir = "../../.lake/packages"
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "orglib"
+path = "../.."
+
+[[lean_lib]]
+name = "Client"

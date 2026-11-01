@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "scope": "Three README demonstrations; source lines checked by scripts/check.py",
+  "declarations": [
+    {
+      "id": "canonical_topology",
+      "name": "OrgLib.NK.Topology",
+      "file": "OrgLib/NK/Basic.lean",
+      "local_name": "Topology",
+      "line": 34,
+      "readme_label": "`Topology`"
+    },
+    {
+      "id": "canonical_fitness",
+      "name": "OrgLib.NK.fitness",
+      "file": "OrgLib/NK/Basic.lean",
+      "local_name": "fitness",
+      "line": 57,
+      "readme_label": "`fitness`"
+    },
+    {
+      "id": "ordered_constructor",
+      "name": "OrgLib.NK.Topology.ofNeighbors",
+      "file": "OrgLib/NK/Indexed.lean",
+      "local_name": "Topology.ofNeighbors",
+      "line": 25,
+      "readme_label": "`Topology.ofNeighbors`"
+    },
+    {
+      "id": "ordered_correspondence",
+      "name": "OrgLib.NK.fitness_eq_indexedAverage",
+      "file": "OrgLib/NK/Indexed.lean",
+      "local_name": "fitness_eq_indexedAverage",
+      "line": 58,
+      "readme_label": "`fitness_eq_indexedAverage`"
+    },
+    {
+      "id": "ordered_inheritance",
+      "name": "OrgLib.NK.indexed_fitness_mem_Icc",
+      "file": "OrgLib/NK/Indexed.lean",
+      "local_name": "indexed_fitness_mem_Icc",
+      "line": 66,
+      "readme_label": "`indexed_fitness_mem_Icc`"
+    },
+    {
+      "id": "shared_constructor",
+      "name": "OrgLib.NK.SharedCyclic.sharedCyclic",
+      "file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "local_name": "sharedCyclic",
+      "line": 28,
+      "readme_label": "`sharedCyclic`"
+    },
+    {
+      "id": "shared_symmetry",
+      "name": "OrgLib.NK.SharedCyclic.sharedCyclic_fitness_rotate",
+      "file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "local_name": "sharedCyclic_fitness_rotate",
+      "line": 65,
+      "readme_label": "rotation symmetry"
+    },
+    {
+      "id": "strict_restriction",
+      "name": "OrgLib.NK.SharedCyclic.witness_no_shared_representation",
+      "file": "OrgLib/NK/SharedCyclic/Separation.lean",
+      "local_name": "witness_no_shared_representation",
+      "line": 63,
+      "readme_label": "nonrepresentation witness"
+    },
+    {
+      "id": "different_law",
+      "name": "OrgLib.NK.SharedCyclic.landscape_laws_ne_N12",
+      "file": "OrgLib/NK/SharedCyclic/SizeTwelve.lean",
+      "local_name": "landscape_laws_ne_N12",
+      "line": 57,
+      "readme_label": "law separation at N=12"
+    }
+  ]
+}

@@ -1,0 +1,1249 @@
+{
+  "schema_version": 1,
+  "scope": "Raw NK quality landscapes, exact source representations and explicitly named continuous laws",
+  "recorded_on": "2026-11-01",
+  "sources": [
+    {
+      "source_id": "canonical-exposition",
+      "filename": "s41469-018-0039-0.pdf",
+      "role": "canonical landscape exposition",
+      "bytes": 719826,
+      "sha256": "88a65c9d02cd3dc2a0b1d64d47acbd45817bfa1382a174a6d6e8b35538c208f8",
+      "doi": "10.1186/s41469-018-0039-0",
+      "author": "Felipe A. Csaszar",
+      "title": "A note on how NK landscapes work",
+      "version": "Journal of Organization Design 7:15 (2018); supplied six-page PDF"
+    },
+    {
+      "source_id": "indexed-article-proof",
+      "filename": "ORSC20231662_AU.pdf",
+      "role": "supplied author proof of OrgSci article",
+      "bytes": 1477336,
+      "sha256": "d8cf46fda346b546353eb9cc8b63e7a8ffc07096a12b3cce1a75c3086d77811d",
+      "doi": "10.1287/orsc.2023.1662",
+      "author": "Scott C. Ganz",
+      "title": "Conflict, Chaos, and the Art of Institutional Design",
+      "version": "Supplied author proof with queries, not an independently compared version of record"
+    },
+    {
+      "source_id": "cyclic-chapter-proof",
+      "filename": "BK-EMP-RSO_V76-210164-Chp03 v2.pdf",
+      "role": "supplied chapter proof with editorial markup",
+      "bytes": 899855,
+      "sha256": "cd65aa97ab19d87583f38e271cb9e1d9388797c5193885849c65a1ac35466eed",
+      "doi": "10.1108/S0733-558X20210000076004",
+      "author": "Scott C. Ganz",
+      "title": "Adaptive Rationality, Garbage Cans, and the Policy Process",
+      "version": "Supplied chapter proof with editorial markup; printed pages 79–96"
+    },
+    {
+      "source_id": "indexed-r",
+      "filename": "gcm_model.R",
+      "role": "active OrgSci model and simulation script",
+      "bytes": 26369,
+      "sha256": "21665cb68c1e146111dd705449dec8dc4ecc00d6eb63a444e98b0741f1bf91ed"
+    },
+    {
+      "source_id": "shared-cyclic-r",
+      "filename": "RSO_replication.R",
+      "role": "assembled chapter model and figure replication script",
+      "bytes": 26150,
+      "sha256": "438d7f38ac18f87d320634bf7a8fa4a2389b12f55a5dbaf3381b1d7bd48df623"
+    },
+    {
+      "source_id": "design-guidance",
+      "filename": "DESIGN.md",
+      "role": "MathEconLib design principles and model guidance",
+      "bytes": 52315,
+      "sha256": "183c5471307517be7c09d7d42252d36e70dbc54362f924e8d222783a0ee9e1a9",
+      "repository": "https://github.com/matheconlib/matheconlib",
+      "commit": "aa7a4e2ef9bfbd241c2b53781d06cdd88de2665a"
+    },
+    {
+      "source_id": "contribution-guidance",
+      "filename": "CONTRIBUTING.md",
+      "role": "MathEconLib contribution and verification guidance",
+      "bytes": 8327,
+      "sha256": "bed86479f185eedbea2268431c1dece74e98d5eb7e321415e3cf17fa5ce01f00",
+      "repository": "https://github.com/matheconlib/matheconlib",
+      "commit": "aa7a4e2ef9bfbd241c2b53781d06cdd88de2665a"
+    }
+  ],
+  "evidence_status": {
+    "source_identity": "Audited supplied versions identified by byte counts and SHA-256",
+    "model_interpretation": {
+      "agent": "Source/model interpretation reviewed during prototype development",
+      "human": "pending"
+    },
+    "current_renamed_library_compile": "See CHECKS.json for the actual checked source fingerprint and result",
+    "fixed_input_execution": "Optional separate R validation supplement; finite comparisons are distinct from universal Lean proofs",
+    "human_release_approval": "pending"
+  },
+  "domains": {
+    "mathematical": "Every natural N,K with K<N; codec separately accepts every natural word length including zero.",
+    "literal_R_codec": "Integer 1<=N<=31,0<=K<N,valid integer configuration codes,binary words and correctly sized finite numeric tables without NA/NaN. Evaluators require supplied valid scopes.",
+    "fixed_fixture_enumeration": "The optional supplement uses sixteen explicit cases at N<=12, not enumeration of the full literal R domain.",
+    "boundaries": "The source sampler N=2,K=1 exception and N=32 encoding/overflow boundary are not Lean topology restrictions."
+  },
+  "inheritance_statement": "Both deterministic source landscapes instantiate canonical NK. The shared cyclic family is a strict fixed-label restriction of the locus-specific cyclic family; its specified continuous landscape law differs from the independent-table law at the same cyclic topology.",
+  "source_precedence": "Prose, displayed equations, active R code and added mathematical idealizations remain separate evidence. Literal chapter equation and code agree on sharing; no code-versus-equation error or final-publication discrepancy is established.",
+  "probability_scope": "Real Lebesgue measure restricted to [0,1], finite entry/locus products and measurable fitness pushforwards at fixed topology. These are explicit idealized joint laws, not R PRNG certificates.",
+  "entries": [
+    {
+      "id": "CORE01",
+      "source_id": "canonical-exposition",
+      "origin_classification": "source_exposition_and_representation_choice",
+      "code_anchor": null,
+      "paper_anchor": {
+        "source_id": "canonical-exposition",
+        "pdf_pages": [
+          2,
+          3
+        ],
+        "printed_pages": [
+          2,
+          3
+        ]
+      },
+      "meaning": "A proposed canonical deterministic NK representation: binary configurations, component-indexed contribution tables, K other permitted inputs, and arithmetic mean fitness.",
+      "hypotheses": "Topology N K records K<N, ordered injective K+1 scopes and focal slot zero. Tables may ignore permitted inputs. Fitness uses a field of characteristic zero.",
+      "lean_file": "OrgLib/NK/Basic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.Config",
+        "OrgLib.NK.LocalWord",
+        "OrgLib.NK.Tables",
+        "OrgLib.NK.Topology",
+        "OrgLib.NK.extract",
+        "OrgLib.NK.contribution",
+        "OrgLib.NK.fitness"
+      ],
+      "claim_limit": "The representation follows the exposition; it does not attribute ownership of NK to its expositor, require essential dependence on each input, or build bounds/independence into deterministic data.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "OP01",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "h.int2bin / h.bin2int",
+        "lines": [
+          58,
+          68
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Fixed-width MSB-first integer/word interpretation. The positional sum also explains h.bin2int, which active get.fitness does not call.",
+      "hypotheses": "Any natural word length m, including zero; q:Fin(2^m) and w:Fin m→Bool. No topology, K<N, or arithmetic structure.",
+      "lean_file": "OrgLib/NK/Encoding.lean",
+      "lean_declarations": [
+        "OrgLib.NK.encode",
+        "OrgLib.NK.decode",
+        "OrgLib.NK.encode_val",
+        "OrgLib.NK.encode_decode",
+        "OrgLib.NK.decode_encode"
+      ],
+      "claim_limit": "Exact codec laws in Lean; no theorem about R machine operations.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP02",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          83,
+          88
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Enumeration codes correspond bijectively to configurations, including leading zeros.",
+      "hypotheses": "Any natural word length m, including zero; q:Fin(2^m) and w:Fin m→Bool. No topology, K<N, or arithmetic structure.",
+      "lean_file": "OrgLib/NK/Encoding.lean",
+      "lean_declarations": [
+        "OrgLib.NK.encode_decode",
+        "OrgLib.NK.decode_encode"
+      ],
+      "claim_limit": "the canonical core enumerates all states of the listed finitefixtures; no practical/unbounded-Renumeration or interpreterverification claim.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP03",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          90,
+          94
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Supply K distinct nonfocal neighbors as an embedding and a nonfocality proof; preserve the supplied order. The R generator sorts sampled neighbors.",
+      "hypotheses": "K<N; neighbors_i:Fin K↪Fin N, each neighbor distinct from focal_i. No coefficient field or table bounds.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.Topology.ofNeighbors"
+      ],
+      "claim_limit": "Deterministic constructor validity; sampling law, sorting algorithm, and original singleton-sample exception are not certified.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP04",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          75,
+          75
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Prepend the focal bit, then read the supplied neighbor sequence in order.",
+      "hypotheses": "K<N; neighbors_i:Fin K↪Fin N, each neighbor distinct from focal_i. No coefficient field or table bounds. Also x:Config N and focal i.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.extract_ofNeighbors"
+      ],
+      "claim_limit": "Equality of the constructed canonical extracted word with the explicit focal-first word.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP05",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          75,
+          75
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Base-two value is the zero-based entry address; R position is its value plus one.",
+      "hypotheses": "Any natural N,K and any coefficient type R, with exactly sized indexed tables/local words; no topology, K<N, Field, or bounds.",
+      "lean_file": "OrgLib/NK/Encoding.lean",
+      "lean_declarations": [
+        "OrgLib.NK.encode",
+        "OrgLib.NK.rIndex",
+        "OrgLib.NK.lookup_eq",
+        "OrgLib.NK.rIndex_pos",
+        "OrgLib.NK.rIndex_le",
+        "OrgLib.NK.lookup_rIndex"
+      ],
+      "claim_limit": "Exact indexed-table interpretation; no string parser/interpreter proof.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP06",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          97,
+          99
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "A length-2^(K+1) entry function at each locus becomes a direct local-word contribution table.",
+      "hypotheses": "Any natural N,K and any coefficient type R, with exactly sized indexed tables/local words; no topology, K<N, Field, or bounds.",
+      "lean_file": "OrgLib/NK/Encoding.lean",
+      "lean_declarations": [
+        "OrgLib.NK.TableEntries",
+        "OrgLib.NK.tablesFromEntries"
+      ],
+      "claim_limit": "Supplied deterministic entries; no independence assertion or verified runif implementation.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP07",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          72,
+          78
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Exact R-shaped sum of each selected entry divided by N equals the reused canonical average.",
+      "hypotheses": "K<N with valid supplied embeddings/nonfocality, entries:TableEntries N K R, x:Config N; Field R and CharZero R. No bounds or independence.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.fitness_eq_indexedAverage"
+      ],
+      "claim_limit": "Universal fixed-input equality in characteristic-zero fields; does not assert bitwise floating-point equality.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP08",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          103,
+          104
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "The evaluator equality holds pointwise for every binary state, hence for states selected by decoding enumeration codes.",
+      "hypotheses": "K<N with valid supplied embeddings/nonfocality, entries:TableEntries N K R, x:Config N; Field R and CharZero R. No bounds or independence.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.fitness_eq_indexedAverage"
+      ],
+      "claim_limit": "Extensional equality of exact evaluations, without simulation execution.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP09",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_and_formalization_choice",
+      "code_anchor": {
+        "function": "init",
+        "lines": [
+          193,
+          204
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Raw gen.payofflandscape quality Q is the adapter target; the later weighted intensity/quality product is separate.",
+      "hypotheses": "Scope boundary in init; no Lean implementation/evaluation claim about weighted utility.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [],
+      "claim_limit": "Scope boundary; no statement about weighted utility, RNG consumption, or trajectories.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP10",
+      "source_id": "indexed-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "gen.payofflandscape (supplied-entry consequence)",
+        "lines": [
+          97,
+          99
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Supplied bounded entries inherit canonical NK bounds by applying the canonical core fitness_mem_Icc.",
+      "hypotheses": "K<N; neighbors_i:Fin K↪Fin N, each neighbor distinct from focal_i. No coefficient field or table bounds. Field R,LinearOrder R,IsStrictOrderedRing R; every supplied entry is in Set.Icc0 1.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.indexed_fitness_mem_Icc"
+      ],
+      "claim_limit": "A derived mathematical consequence of the supplied exact specification; not a theorem claimed to be stated by the R code or paper.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP11",
+      "source_id": "indexed-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (K=0 consequence)",
+        "lines": [
+          72,
+          99
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ],
+        "printed_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "At K=0, the constructed OrgSci instance inherits equivalence of weak one-bit and global maxima by applying the canonical core; no table bounds or stochastic assumptions are needed.",
+      "hypotheses": "K=0,N>0, empty neighbor embeddings, any indexed entries,x. Field R,LinearOrder R,IsStrictOrderedRing R; no bounds.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.indexed_isOneBitLocalMax_iff_isMaxOn_K_zero"
+      ],
+      "claim_limit": "A derived mathematical consequence of the supplied exact specification; not a theorem claimed to be stated by the R code or paper.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP12",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "h.int2bin / h.bin2int",
+        "lines": [
+          77,
+          87
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Fixed-width MSB-first state/address interpretation reuses the canonical core.",
+      "hypotheses": "Any natural word length m, including zero; q:Fin(2^m) and w:Fin m→Bool. No topology, K<N, or arithmetic structure.",
+      "lean_file": "OrgLib/NK/Encoding.lean",
+      "lean_declarations": [
+        "OrgLib.NK.encode",
+        "OrgLib.NK.decode"
+      ],
+      "claim_limit": "No R machine/interpreter proof.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP13",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          101,
+          104
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Doubled strings implement the forward modular window when K<N.",
+      "hypotheses": "K<N and x:Config N (plus focal/slot indices where used); no coefficient field or tables needed.",
+      "lean_file": "OrgLib/NK/Cyclic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.cyclicTopology",
+        "OrgLib.NK.cyclicTopology_scope_val"
+      ],
+      "claim_limit": "Exact mathematical window correspondence; no verified string routine.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP14",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          93,
+          94
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Local slot j at focal i reads (i+j) mod N, self first.",
+      "hypotheses": "K<N and x:Config N (plus focal/slot indices where used); no coefficient field or tables needed.",
+      "lean_file": "OrgLib/NK/Cyclic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.extract_cyclic"
+      ],
+      "claim_limit": "Fixed order and labeled coordinates, not backward influence direction.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP15",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "gen.payofflandscape",
+        "lines": [
+          105,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "One supplied local table is reused at every locus, matching the chapter literal equation.",
+      "hypotheses": "Any natural N,K and coefficient type R; sharedTables accepts any local-word function. No topology, Field, bounds, or independence.",
+      "lean_file": "OrgLib/NK/Cyclic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.sharedTables"
+      ],
+      "claim_limit": "No independent draw at each locus; no verification of runif.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP16",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          94,
+          94
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Reuse the canonical core encoding for the single contribution vector and its one-based R lookup.",
+      "hypotheses": "K<N,one shared indexed vector and x;Field R,CharZero R. No bounds.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.sharedCyclicFromEntries",
+        "OrgLib.NK.SharedCyclic.sharedCyclic_entries_fitness_eq"
+      ],
+      "claim_limit": "Exact indexed representation; not floating-point equality.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP17",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_code",
+      "code_anchor": {
+        "function": "get.fitness",
+        "lines": [
+          91,
+          96
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Canonical NK fitness equals explicit shared forward-window quality; source accumulation divides each term by N.",
+      "hypotheses": "K<N,any shared local-word function φ and x;Field R,CharZero R. No bounds.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.sharedCyclic",
+        "OrgLib.NK.SharedCyclic.sharedCyclic_fitness_eq"
+      ],
+      "claim_limit": "Raw quality only.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP18",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (symmetry consequence)",
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Shared cyclic evaluation is invariant under every rotation by a permutation of focal loci.",
+      "hypotheses": "K<N,any shared φ,x:Config N,r:Fin N;Field R,CharZero R. No bounds/order/stochastic assumptions.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.sharedCyclic_fitness_rotate"
+      ],
+      "claim_limit": "A proved consequence, not a theorem claimed to be stated in source.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP19",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (K=0 consequence)",
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "At K=0 the shared landscape depends only on the number of true bits.",
+      "hypotheses": "K=0,N>0,any shared φ and x;Field R,CharZero R. Counts are natural cardinals with explicit casts.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Properties.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.sharedCyclic_K_zero_hamming"
+      ],
+      "claim_limit": "Cast and natural subtraction conventions are explicit in the theorem.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP20",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (maximality consequence)",
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Strict table preferences characterize all-true/all-false global maxima; equal values make every state maximal.",
+      "hypotheses": "K=0,N>0,any shared φ,x;Field R,LinearOrder R,IsStrictOrderedRing R. Strict true-preference or strict false-preference yields respective iff; equality yields every x maximal. No bounds.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Properties.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.sharedCyclic_isMaxOn_iff_all_true",
+        "OrgLib.NK.SharedCyclic.sharedCyclic_isMaxOn_iff_all_false",
+        "OrgLib.NK.SharedCyclic.sharedCyclic_isMaxOn_of_eq"
+      ],
+      "claim_limit": "No bounds, probability, or search termination assumption.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP21",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "design_decision",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (basis for controlled alternative)",
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Controlled alternative retains ring topology and state meanings while allowing arbitrary locus-specific tables; shared case is included.",
+      "hypotheses": "K<N,Field R,CharZero R;arbitrary locus tables; shared inclusion substitutes sharedTables φ, with no inequality or independence.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.locusSpecificCyclic",
+        "OrgLib.NK.SharedCyclic.locusSpecificCyclic_sharedTables"
+      ],
+      "claim_limit": "Alternative is not the unmodified R script and does not assert independent or unequal tables.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP22",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "mathematical_consequence",
+      "code_anchor": {
+        "function": "get.fitness / gen.payofflandscape (representation consequence)",
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "At N=2,K=0, the bounded rational witness has quality 1 at state 01 and quality 0 at state 10; no shared table agrees on the same labeled configurations.",
+      "hypotheses": "N=2,K=0,explicit bounded rational witness; candidate shared φ:LocalWord0→ℚ is arbitrary/unbounded;fixed labeled Config2 domain. No arbitrary recoding or law comparison.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Separation.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.witnessTables",
+        "OrgLib.NK.SharedCyclic.witnessTables_bounded",
+        "OrgLib.NK.SharedCyclic.witness_fitness_state01",
+        "OrgLib.NK.SharedCyclic.witness_fitness_state10",
+        "OrgLib.NK.SharedCyclic.sharedCyclic_state01_eq_state10",
+        "OrgLib.NK.SharedCyclic.witness_no_shared_representation"
+      ],
+      "claim_limit": "No arbitrary-state-recoding or stochastic-law non-equivalence claim.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP23",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "scope_boundary",
+      "code_anchor": {
+        "function": "init",
+        "lines": [
+          170,
+          181
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Raw quality is kept separate from later weighted intensity, utility, and dynamics.",
+      "hypotheses": "Scope boundary in init; no claim about weighted utility, RNG consumption, or simulation outcomes.",
+      "lean_file": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "lean_declarations": [],
+      "claim_limit": "No substantive correction-impact experiment or full simulation is formalized.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending",
+      "paper_limit": "Paper specifies the mathematical landscape; codec/array details and execution limits are code-derived. Mathematical consequences are separately proved, not attributed as source-stated theorems."
+    },
+    {
+      "id": "OP24",
+      "source_id": null,
+      "origin_classification": "mathematical_obligation/formalization_choice",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "Casting arbitrary rational contribution tables into real tables commutes with local contribution and canonical average.",
+      "hypotheses": "Any Topology N K,Tables N K ℚ,x:Config N; no bounds or probabilistic assumptions.",
+      "lean_file": "OrgLib/NK/Cast.lean",
+      "lean_declarations": [
+        "OrgLib.NK.contribution_ratCast",
+        "OrgLib.NK.fitness_ratCast"
+      ],
+      "claim_limit": "No verification of binary64 arithmetic or R interpreter.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "OP25",
+      "source_id": "canonical-exposition",
+      "origin_classification": "source_text_and_visual_transcription",
+      "code_anchor": null,
+      "paper_anchor": {
+        "pdf_pages": [
+          3,
+          3
+        ],
+        "printed_pages": [
+          3,
+          3
+        ],
+        "section": "Three-component tables and displayed F(0,0,1) calculation"
+      },
+      "meaning": "Exact rational transcription of the printed three-component table, preserving local coordinate order; all eight states have kernel proof anchors.",
+      "hypotheses": "The specific three-component table printed on p3, not arbitrary NK landscapes.",
+      "lean_file": "OrgLibExamples/ThreeComponent.lean",
+      "lean_declarations": [
+        "OrgLibExamples.ThreeComponent.expected_code_0",
+        "OrgLibExamples.ThreeComponent.expected_code_1",
+        "OrgLibExamples.ThreeComponent.expected_code_2",
+        "OrgLibExamples.ThreeComponent.expected_code_3",
+        "OrgLibExamples.ThreeComponent.expected_code_4",
+        "OrgLibExamples.ThreeComponent.expected_code_5",
+        "OrgLibExamples.ThreeComponent.expected_code_6",
+        "OrgLibExamples.ThreeComponent.expected_code_7"
+      ],
+      "claim_limit": "R OrgSci evaluator is used as an independent implementation of the supplied canonical data; the Csaszar paper has no supplied executable code.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW01",
+      "source_id": "indexed-r",
+      "origin_classification": "code_derived_idealization",
+      "code_anchor": {
+        "lines": [
+          97,
+          99
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Continuous unit-uniform entry law and finite local-word product.",
+      "hypotheses": "U has no parameters and uses the standard real Lebesgue/Borel structures; tableUniform accepts any natural K with the finite LocalWord K coordinate index.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.unitUniform",
+        "OrgLib.NK.tableUniform"
+      ],
+      "claim_limit": "Uniform marginals do not on their own establish the full joint law. The chosen product is an explicit idealized specification, not a certificate for runif.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW02",
+      "source_id": "indexed-r",
+      "origin_classification": "explicit_joint_law",
+      "code_anchor": {
+        "lines": [
+          97,
+          99
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "Nested product over locus tags and local-word entries at a supplied fixed topology.",
+      "hypotheses": "independentTablesUniform accepts any natural N,K; evaluated independentUniform takes a valid Topology N K. Nested products specify full joint independence.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.independentTablesUniform",
+        "OrgLib.NK.independentUniform"
+      ],
+      "claim_limit": "No verification of R PRNG independence and no distribution over sampled topologies.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW03",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "source_design_and_idealized_law",
+      "code_anchor": {
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "One independently sampled table, shared across all cyclic loci, then realized by canonical fitness.",
+      "hypotheses": "K<N for the cyclic realization and shared pushforward; any real shared table is evaluated. The probability law on that table is tableUniform K.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.sharedRealization",
+        "OrgLib.NK.sharedUniformCyclic"
+      ],
+      "claim_limit": "Repeated uses of one table entry are shared random values; independence across loci is not asserted.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW04",
+      "source_id": "shared-cyclic-r",
+      "origin_classification": "controlled_alternative_joint_law",
+      "code_anchor": {
+        "lines": [
+          91,
+          105
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "cyclic-chapter-proof",
+        "section": "2.2",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "printed_pages": [
+          85,
+          86
+        ]
+      },
+      "meaning": "Independent-table law specialized to the same fixed cyclic topology as the shared law.",
+      "hypotheses": "K<N; the independent law uses cyclicTopology hKN, identical to the shared construction at those parameters.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.independentUniformCyclic"
+      ],
+      "claim_limit": "Keeps topology and labels fixed; it is not the as-written chapter sampling construction.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW05",
+      "source_id": null,
+      "origin_classification": "mathematical_obligation",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "Finite sums of measurable coordinate projections make both real-valued realization maps measurable in every landscape coordinate.",
+      "hypotheses": "Valid T:Topology N K for independent realization; K<N for shared realization. Standard Pi measurable structures; no sampled-value bounds assumed.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.measurable_independentRealization",
+        "OrgLib.NK.measurable_sharedRealization"
+      ],
+      "claim_limit": "Product measurable spaces on tables/landscapes, no evaluator injectivity assumption.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW06",
+      "source_id": null,
+      "origin_classification": "mathematical_obligation",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "Base, product, and pushforward laws have mass one.",
+      "hypotheses": "Base/table products at all natural index sizes; mapped law at a supplied Topology or K<N cyclic specialization. Measurability is proved before map normalization.",
+      "lean_file": "OrgLib/NK/Ensembles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.unitUniform_univ",
+        "OrgLib.NK.tableUniform_univ",
+        "OrgLib.NK.independentTablesUniform_univ",
+        "OrgLib.NK.sharedUniformCyclic_univ",
+        "OrgLib.NK.independentUniform_univ",
+        "OrgLib.NK.independentUniformCyclic_univ"
+      ],
+      "claim_limit": "Pushforward probability uses previously proved realization measurability.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW07",
+      "source_id": null,
+      "origin_classification": "continuous_measure_calculation",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "Restricted Lebesgue half masses and finite product rectangle give exactly (1/4)^N.",
+      "hypotheses": "Any natural N,K; selected words wx,wy:Fin N→LocalWord K with ∀i,wx i≠wy i. No K<N/topology hypothesis is needed for the data rectangle calculation.",
+      "lean_file": "OrgLib/NK/EnsembleRectangles.lean",
+      "lean_declarations": [
+        "OrgLib.NK.unitUniform_Ioi_half",
+        "OrgLib.NK.unitUniform_Iic_half",
+        "OrgLib.NK.independentTablesUniform_entryRectangle"
+      ],
+      "claim_limit": "Requires distinct selected words within each locus; remaining entries are unrestricted. No Bernoulli approximation.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW08",
+      "source_id": null,
+      "origin_classification": "evaluated_law_consequence",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "The measurable observable event is reached by a sufficient positive-mass table rectangle.",
+      "hypotheses": "Event measurable for any x,y:Config N. Pushforward lower bound requires T:Topology N K and ∀i,extract T x i≠extract T y i; T derives N>0.",
+      "lean_file": "OrgLib/NK/SharedCyclic/EnsembleSeparation.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.landscapeEvent",
+        "OrgLib.NK.SharedCyclic.measurableSet_landscapeEvent",
+        "OrgLib.NK.SharedCyclic.entryRectangle_subset_event_preimage",
+        "OrgLib.NK.SharedCyclic.independent_event_lower_bound"
+      ],
+      "claim_limit": "Strict and weak average comparisons use a valid topology and its derived N>0; lower bound is not exact event mass.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW09",
+      "source_id": null,
+      "origin_classification": "continuous_law_separation",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "At N=2,K=0, shared event mass is zero and independent mass is at least 1/16, hence unequal evaluated-landscape measures.",
+      "hypotheses": "Exactly N=2,K=0, fixed states01 and10 and fixed cyclic topology, using the specified continuous shared and independent laws.",
+      "lean_file": "OrgLib/NK/SharedCyclic/EnsembleSeparation.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.shared_event_state01_state10",
+        "OrgLib.NK.SharedCyclic.independent_event_state01_state10",
+        "OrgLib.NK.SharedCyclic.shared_independent_laws_ne"
+      ],
+      "claim_limit": "Same cyclic topology and fixed labeled states01/10. Does not assert table-law difference alone or arbitrary recoding obstruction.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "LAW10",
+      "source_id": null,
+      "origin_classification": "continuous_law_separation",
+      "code_anchor": null,
+      "paper_anchor": null,
+      "meaning": "For every K<12, alternating states yield shared mass zero and independent mass at least (1/2)^24, and unequal evaluated laws.",
+      "hypotheses": "Exactly N=12 and every natural K<12, fixed alternating01/10 labels and the same cyclic topology on both sides. No empirical sampling or dynamics assumption.",
+      "lean_file": "OrgLib/NK/SharedCyclic/SizeTwelve.lean",
+      "lean_declarations": [
+        "OrgLib.NK.SharedCyclic.alternating_extract_ne",
+        "OrgLib.NK.SharedCyclic.shared_event_zero_N12",
+        "OrgLib.NK.SharedCyclic.independent_event_lower_bound_N12",
+        "OrgLib.NK.SharedCyclic.landscape_laws_ne_N12"
+      ],
+      "claim_limit": "Only the twelve-bit rotation/opposition helpers use finite decide; arity proof and continuous mass theorem are generic. No substantive-outcome effect estimate.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    },
+    {
+      "id": "BOUNDARY01",
+      "source_id": "indexed-r",
+      "origin_classification": "source_code_boundary",
+      "code_anchor": {
+        "function": "gen.payofflandscape / sample",
+        "lines": [
+          90,
+          94
+        ]
+      },
+      "paper_anchor": {
+        "source_id": "indexed-article-proof",
+        "section": "3.1",
+        "pdf_pages": [
+          8,
+          8
+        ]
+      },
+      "meaning": "The mathematical constructor requires distinct nonfocal supplied neighbors; source code sorts its sampled neighbors.",
+      "hypotheses": "The Lean constructor takes K<N plus embeddings and proofs of nonfocality. These validate supplied data, not the R sampler.",
+      "lean_file": "OrgLib/NK/Indexed.lean",
+      "lean_declarations": [
+        "OrgLib.NK.Topology.ofNeighbors"
+      ],
+      "claim_limit": "At N=2,K=1,i=1, R numeric-singleton sample semantics can select the focal index. Paper N=12 avoids this case. No sampler-correctness theorem is asserted.",
+      "compile_evidence": "CHECKS.json",
+      "human_review": "pending"
+    }
+  ],
+  "omitted_layers": [
+    "resource/intensity transformation",
+    "political/spatial utility",
+    "attendance/quorum/voting",
+    "agenda rules",
+    "search trajectories",
+    "substantive correction impact"
+  ],
+  "supplement": "../supplements/README.md"
+}

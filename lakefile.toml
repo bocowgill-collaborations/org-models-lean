@@ -1,0 +1,28 @@
+name = "orglib"
+version = "0.1.0"
+keywords = ["math", "organizations"]
+defaultTargets = ["OrgLib", "OrgLibExamples", "OrgLibTest", "nk_demo"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+pp.unicode.fun = true
+linter.style.longLine = true
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "8f9d9cff6bd728b17a24e163c9402775d9e6a365"
+
+[[lean_lib]]
+name = "OrgLib"
+
+[[lean_lib]]
+name = "OrgLibExamples"
+
+[[lean_lib]]
+name = "OrgLibTest"
+
+[[lean_exe]]
+name = "nk_demo"
+root = "OrgLibExamples.DemoMain"

@@ -1,0 +1,863 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-01",
+  "status": "passed_for_local_publication_candidate",
+  "scope": "Canonical NK quality, indexed inheritance, shared cyclic restriction and landscape-law separation",
+  "pins": {
+    "Lean": "leanprover/lean4:v4.28.0",
+    "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "revision": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+        "origin": "https://github.com/leanprover-community/mathlib4.git",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "plausible",
+        "revision": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+        "origin": "https://github.com/leanprover-community/plausible",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "origin": "https://github.com/leanprover-community/LeanSearchClient",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "importGraph",
+        "revision": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+        "origin": "https://github.com/leanprover-community/import-graph",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+        "origin": "https://github.com/leanprover-community/ProofWidgets4",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "aesop",
+        "revision": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+        "origin": "https://github.com/leanprover-community/aesop",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "Qq",
+        "revision": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+        "origin": "https://github.com/leanprover-community/quote4",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "batteries",
+        "revision": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+        "origin": "https://github.com/leanprover-community/batteries",
+        "tracked_source_clean": true,
+        "build_cache_copy": "APFS_copy_on_write_independent_files"
+      },
+      {
+        "name": "Cli",
+        "revision": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+        "origin": "https://github.com/leanprover/lean4-cli",
+        "tracked_source_clean": true,
+        "build_cache_copy": "no_build_cache_needed"
+      }
+    ]
+  },
+  "commands": [
+    "lake exe cache get (network bootstrap instructions; not run in recorded offline mode)",
+    "lake build",
+    "lake exe nk_demo",
+    "python3 scripts/check.py",
+    "python3 examples/external-client/prepare_manifest.py",
+    "lake -d examples/external-client build Client",
+    "python3 configure.py --library-root <matching-checkout> (inside extracted supplement)",
+    "lake build (inside supplement)",
+    "python3 scripts/run_validation.py --orgsci-source <matching-original> --chapter-source <matching-original>"
+  ],
+  "static_checks": {
+    "status": "passed",
+    "lean_files": 37,
+    "axiom_guard_modules": 6,
+    "source_correspondence_rows": 37,
+    "declaration_references": 91,
+    "claim_pointers": 9,
+    "local_links": 88,
+    "pinned_dependencies": 9,
+    "scope": "Static structure; run lake build for proof checking; human review is separate"
+  },
+  "clean_reproduction": {
+    "status": "passed",
+    "mode": "offline_pinned_dependency_caches",
+    "started_without_lake": true,
+    "no_project_build_copied": true,
+    "temporary_fixture_commit": "8f0425b28098e3a4c393159e7b8a2ea5b410fac0",
+    "report_sha256": "73b6f52320d8212470a236fee9aa1e72f830f7cbd3cf64e7ce1c5d1e62675939",
+    "builds": {
+      "default_build": {
+        "exit_code": 0,
+        "elapsed_seconds": 46.92,
+        "log": "default_build.log",
+        "jobs": 5008,
+        "warnings": [],
+        "log_sha256": "652a0922e3cc184af18fc209b915830902d3abb62d75dfd5d9fb4d87a296079b"
+      },
+      "external_client": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.327,
+        "log": "external_client.log",
+        "jobs": 2499,
+        "warnings": [],
+        "log_sha256": "468b2d4da049de4257b4b49773388acc7ed5e6c83eb9b941344bfa29191c898c"
+      },
+      "supplement_build": {
+        "exit_code": 0,
+        "elapsed_seconds": 11.461,
+        "log": "supplement_build.log",
+        "jobs": 4986,
+        "warnings": [],
+        "log_sha256": "d2531738679c17aeb174ddab0fba8718473a751cdaff58f59d895fa3fac51964"
+      }
+    },
+    "stage_results": {
+      "snapshot_init": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.021,
+        "log": "snapshot_init.log"
+      },
+      "snapshot_add": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.04,
+        "log": "snapshot_add.log"
+      },
+      "snapshot_commit": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.039,
+        "log": "snapshot_commit.log"
+      },
+      "independent_clone": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.074,
+        "log": "independent_clone.log"
+      },
+      "source_check": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.126,
+        "log": "source_check.log"
+      },
+      "default_build": {
+        "exit_code": 0,
+        "elapsed_seconds": 46.92,
+        "log": "default_build.log"
+      },
+      "demo": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.253,
+        "log": "demo.log"
+      },
+      "client_manifest": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.038,
+        "log": "client_manifest.log"
+      },
+      "external_client": {
+        "exit_code": 0,
+        "elapsed_seconds": 3.327,
+        "log": "external_client.log"
+      },
+      "supplement_configure": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.04,
+        "log": "supplement_configure.log"
+      },
+      "supplement_build": {
+        "exit_code": 0,
+        "elapsed_seconds": 11.461,
+        "log": "supplement_build.log"
+      },
+      "fixed_input_validation": {
+        "exit_code": 0,
+        "elapsed_seconds": 17.675,
+        "log": "fixed_input_validation.log"
+      }
+    },
+    "logs": [
+      {
+        "path": "logs/client_manifest.log",
+        "sha256": "b910d9a13ce3c44a7401f528d140ce5a80d083942b28679bea47c53361adf06e",
+        "bytes": 55
+      },
+      {
+        "path": "logs/default_build.log",
+        "sha256": "652a0922e3cc184af18fc209b915830902d3abb62d75dfd5d9fb4d87a296079b",
+        "bytes": 8001
+      },
+      {
+        "path": "logs/demo.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-Cli-checkout.log",
+        "sha256": "39ef7846c8f88a1a4dd68fc2988c20f00bfa616feccbd4f052a76c09d2f8ebfc",
+        "bytes": 62
+      },
+      {
+        "path": "logs/dependency-Cli-clone.log",
+        "sha256": "916be80096d44b3ca97c620656fc4aca44090ac065f5b5d9233b8101b270b167",
+        "bytes": 95
+      },
+      {
+        "path": "logs/dependency-Cli-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-LeanSearchClient-checkout.log",
+        "sha256": "218d48879abee781db75c9b0c91aa3e431c5bab7b4219f30333da0d048baa5be",
+        "bytes": 68
+      },
+      {
+        "path": "logs/dependency-LeanSearchClient-clone.log",
+        "sha256": "b784d99066bc562008e19f33faf8bedbe7f30e2b4681a02dfc75d16a0f449a04",
+        "bytes": 108
+      },
+      {
+        "path": "logs/dependency-LeanSearchClient-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-Qq-checkout.log",
+        "sha256": "1566705a474ab7e0b575088fa7bc2bbb657ddc712e6851cb6c5e1e969e8f4154",
+        "bytes": 63
+      },
+      {
+        "path": "logs/dependency-Qq-clone.log",
+        "sha256": "1cf81b3bad45744e5cb81601dbc1abf6202406b1c05baea0a25276085cafc24b",
+        "bytes": 94
+      },
+      {
+        "path": "logs/dependency-Qq-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-aesop-checkout.log",
+        "sha256": "30862034000f367e3962a76e9b0085871169188ffcc888d6227cc00d7fb0c5f1",
+        "bytes": 63
+      },
+      {
+        "path": "logs/dependency-aesop-clone.log",
+        "sha256": "28a5e08f253997ad9062fb5fdefa1fa39bb7898ed0de8f48e522898161883da9",
+        "bytes": 97
+      },
+      {
+        "path": "logs/dependency-aesop-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-batteries-checkout.log",
+        "sha256": "52ca897038fbf0a39701325e722ad54b4a334f2c14ce34c3ced472b8893b8a6e",
+        "bytes": 65
+      },
+      {
+        "path": "logs/dependency-batteries-clone.log",
+        "sha256": "aa60623c81053750261ae2f195c5b88d9ccc96b223530d20a0b27753af5e2d94",
+        "bytes": 101
+      },
+      {
+        "path": "logs/dependency-batteries-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-importGraph-checkout.log",
+        "sha256": "1d05a9d6cc296913e7363b60eaf4c166da9417cc0ac4929fd8cd02edc3a2c8eb",
+        "bytes": 63
+      },
+      {
+        "path": "logs/dependency-importGraph-clone.log",
+        "sha256": "3ecc51eae3282843a1c8a72d9b8864c969288b23a3b33dc7910b920e6f32b717",
+        "bytes": 103
+      },
+      {
+        "path": "logs/dependency-importGraph-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-mathlib-checkout.log",
+        "sha256": "25be86fcf091d854718f4f8a7f84366f35ec318dd139f2a4e085b7ebc641baf4",
+        "bytes": 68
+      },
+      {
+        "path": "logs/dependency-mathlib-clone.log",
+        "sha256": "6bea32a7b71a01aae40e630e9c1d60fba125c001c81b6a2395857315c1783763",
+        "bytes": 99
+      },
+      {
+        "path": "logs/dependency-mathlib-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-plausible-checkout.log",
+        "sha256": "0fef110cb5df1f2afa7f38070d564188be34074c1583d0bfbde1ba1d1418e65d",
+        "bytes": 62
+      },
+      {
+        "path": "logs/dependency-plausible-clone.log",
+        "sha256": "845090047fc3859b82ca148f963c390528aefafb109813bca80d0fa120241f4d",
+        "bytes": 101
+      },
+      {
+        "path": "logs/dependency-plausible-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/dependency-proofwidgets-checkout.log",
+        "sha256": "d021d6a4f81392311c46def16d99e36a7fd4a435360f5de9b7317ed7551f6658",
+        "bytes": 63
+      },
+      {
+        "path": "logs/dependency-proofwidgets-clone.log",
+        "sha256": "345fa9163f0d9fafb9d4791714a527a7deb6f21591fe7df6cfb5597d10592426",
+        "bytes": 104
+      },
+      {
+        "path": "logs/dependency-proofwidgets-origin.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/external_client.log",
+        "sha256": "468b2d4da049de4257b4b49773388acc7ed5e6c83eb9b941344bfa29191c898c",
+        "bytes": 78
+      },
+      {
+        "path": "logs/fixed_input_validation.log",
+        "sha256": "72e1b04d8d32393a59dceac129cc8da3ee439d8d34ca306313ce4f4cd45ab896",
+        "bytes": 172
+      },
+      {
+        "path": "logs/independent_clone.log",
+        "sha256": "515fbc046dfd9fd60fcb88dd261b1ae267dca97c47b999672ec5c718d6e54f69",
+        "bytes": 76
+      },
+      {
+        "path": "logs/snapshot_add.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "logs/snapshot_commit.log",
+        "sha256": "9b2810d14ae54c4b458bae33378c28b6d1ac425d5f01c4dc729d6dd5550d1617",
+        "bytes": 2990
+      },
+      {
+        "path": "logs/snapshot_init.log",
+        "sha256": "1e44636a1fc20ea3cb4c7653e93da86bd98b807afbbeb79dce0c41a2a7404d67",
+        "bytes": 94
+      },
+      {
+        "path": "logs/source_check.log",
+        "sha256": "5f1c4e468e599f56e54db94f0d45be4aed8f72f401f22fe8abe4e7133887c182",
+        "bytes": 305
+      },
+      {
+        "path": "logs/supplement_build.log",
+        "sha256": "d2531738679c17aeb174ddab0fba8718473a751cdaff58f59d895fa3fac51964",
+        "bytes": 384
+      },
+      {
+        "path": "logs/supplement_configure.log",
+        "sha256": "120f5655a453b364a39f87971c0c8ff392ee53ae2b05e622c802c9f654e15b49",
+        "bytes": 184
+      }
+    ],
+    "limits": "Exact clean pinned dependency sources and independent cached dependency artifacts; no project builds copied, no internet-fresh bootstrap or full dependency source rebuild claimed"
+  },
+  "demo": {
+    "status": "passed",
+    "output": [
+      "Three-component NK example (001): 1/2",
+      "Ordered-neighbor NK example: 13/63",
+      "Shared cyclic example: 5/27",
+      "Locus-specific witness (01): 1",
+      "Locus-specific witness (10): 0",
+      "Checked proofs: canonical reuse, rotation symmetry, and landscape-law separation.",
+      "Scope: quality landscapes at fixed labels; organizational dynamics are separate."
+    ],
+    "sha256": "3a954bdfc02e11beb2cff62e60ad083d20af8ca8878bb1da44231745dbbd9c59",
+    "matches_documented_values": true
+  },
+  "proof_audits": {
+    "status": "passed_in_fresh_default_build",
+    "checks_by_module": {
+      "Axioms.lean": 21,
+      "CastAxioms.lean": 12,
+      "EnsembleAxioms.lean": 49,
+      "HeadlineAxioms.lean": 9,
+      "IndexedAxioms.lean": 23,
+      "SharedCyclicAxioms.lean": 34
+    },
+    "checks": 148,
+    "unique_resolved_declarations": 137,
+    "headline_printed_reports": 9,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "small_example_kernel_anchors": 8,
+    "source_shortcut_scan": "no sorry, admit, native_decide, unsafe or custom axiom declarations"
+  },
+  "validation_supplement": {
+    "artifact": "nk-r-validation-supplement.tar.gz",
+    "sha256": "28514c18ac89b734a9fd3402c4e79668e102481f26a583d7c8c32bf5aea812aa",
+    "bytes": 41824,
+    "files": 19,
+    "deterministic_repeat": "byte_identical_in_recorded_environment",
+    "status": "fresh_extracted_copy_passed",
+    "cases": 16,
+    "base_states": 16480,
+    "numeric_comparisons": 168232,
+    "arithmetic_modes": {
+      "tolerance_absrel": 168016,
+      "exact_dyadic": 216
+    },
+    "maximum_absolute_error": "1/4503599627370496",
+    "negative_controls": [
+      {
+        "name": "reversed_bits",
+        "baseline_id": "indexed_n4_k3",
+        "mismatching_states_detected": 12,
+        "quality_mismatches_detected": 12,
+        "status": "rejected_as_expected"
+      },
+      {
+        "name": "reversed_neighbors",
+        "baseline_id": "indexed_n4_k3",
+        "mismatching_states_detected": 14,
+        "quality_mismatches_detected": 14,
+        "status": "rejected_as_expected"
+      },
+      {
+        "name": "changed_table_entry",
+        "baseline_id": "indexed_n4_k3",
+        "mismatching_states_detected": 1,
+        "quality_mismatches_detected": 1,
+        "status": "rejected_as_expected"
+      }
+    ],
+    "failure_count": 0,
+    "runtime": {
+      "R_version": "R version 4.6.1 (2026-06-24)",
+      "platform": "aarch64-apple-darwin23",
+      "packages": {
+        "glue": "1.8.1",
+        "jsonlite": "2.0.0"
+      },
+      "RNGkind": [
+        "Mersenne-Twister",
+        "Inversion",
+        "Rejection"
+      ],
+      "seed_created": false,
+      "RNG_draws": "none",
+      "index_observation": "Actual strtoi return values from the source evaluator; transparent lexical wrapper calls base::strtoi unchanged",
+      "sources_evaluated": {
+        "orgsci": {
+          "h.int2bin": {
+            "file": "indexed_h_int2bin.R",
+            "lines": [
+              58,
+              65
+            ],
+            "parsed_assignment": "h.int2bin"
+          },
+          "get.fitness": {
+            "file": "indexed_get_fitness.R",
+            "lines": [
+              72,
+              79
+            ],
+            "parsed_assignment": "get.fitness"
+          }
+        },
+        "chapter": {
+          "h.int2bin": {
+            "file": "chapter_h_int2bin.R",
+            "lines": [
+              77,
+              84
+            ],
+            "parsed_assignment": "h.int2bin"
+          },
+          "get.fitness": {
+            "file": "chapter_get_fitness.R",
+            "lines": [
+              91,
+              97
+            ],
+            "parsed_assignment": "get.fitness"
+          }
+        }
+      },
+      "primary_rows": 16480,
+      "negative_rows": 48
+    },
+    "source_identities_unchanged": [
+      {
+        "source_id": "orgsci-model-r",
+        "filename": "gcm_model.R",
+        "sha256": "21665cb68c1e146111dd705449dec8dc4ecc00d6eb63a444e98b0741f1bf91ed"
+      },
+      {
+        "source_id": "chapter-replication-r",
+        "filename": "RSO_replication.R",
+        "sha256": "438d7f38ac18f87d320634bf7a8fa4a2389b12f55a5dbaf3381b1d7bd48df623"
+      }
+    ],
+    "legacy_output_relation": "byte_identical_after_case_id_mapping",
+    "summary_sha256": "72997430277c6a25cced3a83635416834835cdf1f9970aec4ba7149f3bbb21df",
+    "comparison_tsv_sha256": "155e9073fb5f74443610132a84389cbc096da03f9113b924a1a19892aec659f4",
+    "scope": "Fixed inputs and isolated evaluator functions; no full simulations, PRNG verification or universal R correctness claim"
+  },
+  "agent_review": {
+    "status": "approved_no_open_findings",
+    "record": "docs/REVIEW.md",
+    "sha256": "d2a63c56f0b80f7afde08533919a9e696349b53065d0be94c20521227b448a6e",
+    "regression_controls": [
+      {
+        "control": "wrong_existing_README_line",
+        "status": "rejected",
+        "reason": "README claim link does not identify its declaration: OrgLib.NK.Topology"
+      },
+      {
+        "control": "manifest_omission_scripts/run_validation.py",
+        "status": "rejected",
+        "reason": "Manifest omits required supplement source"
+      },
+      {
+        "control": "manifest_omission_NKValidation/Axioms.lean",
+        "status": "rejected",
+        "reason": "Manifest omits required supplement source"
+      },
+      {
+        "control": "windows_path",
+        "status": "rejected"
+      },
+      {
+        "control": "mac_temp_path",
+        "status": "rejected"
+      },
+      {
+        "control": "linked_role_directory",
+        "status": "rejected",
+        "reason": "Linked/missing source directory: scripts"
+      }
+    ]
+  },
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "c41a7a6a132399a93147ef7361a56d4d22063e21f135e5924fc1df64bd681a99"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "d7a87a17839ae7a96c78e2f4c9edba53a77f8d53c08e961cdaa5f0ed7a5bb9a4"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "85e53560ab20d48ddaf35f329b487a4b088c936e14ad7ef8d62d216097f7f6be"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "e2d55add02cbdd2dd1b514f91bd66b17ded980cd890111e70b56a1e3c7953794"
+    },
+    {
+      "path": "OrgLib/NK/Basic.lean",
+      "sha256": "5874c5089ac5858c65abe12517a585c3ed36508bda3c3ae43e3cc07a08dcd79d"
+    },
+    {
+      "path": "OrgLib/NK/Cast.lean",
+      "sha256": "0ea6461a32129fd5726c0b33945ec8cf80ee35d42f97738d408ea8993b72cda6"
+    },
+    {
+      "path": "OrgLib/NK/Cyclic.lean",
+      "sha256": "b9c7022b47337176e6f774b9db840ba99730efd8f03338786c2d7c3bcb3504ae"
+    },
+    {
+      "path": "OrgLib/NK/Encoding.lean",
+      "sha256": "8ec82d78b72beade2426dc3bde622596fcb9063d922a87ca6942ea87079793b6"
+    },
+    {
+      "path": "OrgLib/NK/EnsembleRectangles.lean",
+      "sha256": "435b113379accdf263b6eabab94b931e012c1e9f0a28aef9cf0ec852a178408c"
+    },
+    {
+      "path": "OrgLib/NK/Ensembles.lean",
+      "sha256": "7cb71d3a8fab95b1a2c2e7650687c818a2f20a5890087c2297b1e7d1c555c2c0"
+    },
+    {
+      "path": "OrgLib/NK/Indexed.lean",
+      "sha256": "3997ebf78e7e4f576f95f1058b5af8005c4f4844215bc7974cc68e80139565bc"
+    },
+    {
+      "path": "OrgLib/NK/Properties.lean",
+      "sha256": "7992efa7c2e778f31e5a7a9f3b88e6588934c91880e0adbfa8aed1a4678d0065"
+    },
+    {
+      "path": "OrgLib/NK/SharedCyclic/Basic.lean",
+      "sha256": "b9d34158f3920aa956f84953eb7e6dec96c8dabbbf8098ac7d96a2737bcfec04"
+    },
+    {
+      "path": "OrgLib/NK/SharedCyclic/EnsembleSeparation.lean",
+      "sha256": "c7984972e0d602cc4b1a09a0a989cc287a73062b78edfee91bbbe04e4118712f"
+    },
+    {
+      "path": "OrgLib/NK/SharedCyclic/Properties.lean",
+      "sha256": "7975a00412cb662eff09ce8102a5fd99d7d16e03173f363137681ec7f258e5a5"
+    },
+    {
+      "path": "OrgLib/NK/SharedCyclic/Separation.lean",
+      "sha256": "f9a348598c2fe3b408a3b35aaed032667634416aa7a906c3c08d40d985c0f313"
+    },
+    {
+      "path": "OrgLib/NK/SharedCyclic/SizeTwelve.lean",
+      "sha256": "990d03cdd5c2bb67f1e2b0b6f8b3b61f785bbf672555611115d8e9aa31284dcc"
+    },
+    {
+      "path": "OrgLib.lean",
+      "sha256": "f722d8b1ff86cf8d4b1ca58ba257ef898de92f6afbfbedc0b5bcc9f3cff86408"
+    },
+    {
+      "path": "OrgLibExamples/ContinuousEnsembles.lean",
+      "sha256": "bf00e56aa33bc7b933878703d9a1de51584d1a5d0a8e712316db94356e9ee706"
+    },
+    {
+      "path": "OrgLibExamples/DemoMain.lean",
+      "sha256": "5fbd90aee4a320ec1c68a6871c93fcdf1a8030624399b61159c165eb6f1da8a8"
+    },
+    {
+      "path": "OrgLibExamples/Indexed.lean",
+      "sha256": "6934dcf0b8a6119bc2cdb06de1e386d475b4a348d7b643b2c886afa4583ab617"
+    },
+    {
+      "path": "OrgLibExamples/NK.lean",
+      "sha256": "bc19df6f84f6215869d4dc87051c95721eb37551f656ccad01799de2830d213e"
+    },
+    {
+      "path": "OrgLibExamples/SharedCyclic.lean",
+      "sha256": "a5e2a193be80ee9c853bc54f14f636e4fb4e87b5c70fcd8344fef558f11619fa"
+    },
+    {
+      "path": "OrgLibExamples/ThreeComponent.lean",
+      "sha256": "fb25decf8005bf1388964d52a536c562f421dcdbcaefe9e958bd54d402bf5fd8"
+    },
+    {
+      "path": "OrgLibExamples/Walkthrough.lean",
+      "sha256": "17ccec4a549a1989e913890456a49f0082d7974de8b29cb26dd841b19cdf0335"
+    },
+    {
+      "path": "OrgLibExamples.lean",
+      "sha256": "8373cbe1b6164bfde4dad6a2c679ebb41218f76754495aff6ae99f83e761b54e"
+    },
+    {
+      "path": "OrgLibTest/Axioms.lean",
+      "sha256": "6b880d5e683d17ac3287f3295190289065cd7ec11cf70e4b317bacdc6b751269"
+    },
+    {
+      "path": "OrgLibTest/CastAPI.lean",
+      "sha256": "c0e4a47c286ffc22cf5f2b6ffdc881624baea16d01e55f1cba2fb23156cc3ab2"
+    },
+    {
+      "path": "OrgLibTest/CastAxioms.lean",
+      "sha256": "27f9ffbc370da42db3f8271be52d698758e5e3d56d1a973046802b031909377c"
+    },
+    {
+      "path": "OrgLibTest/CoreAPI.lean",
+      "sha256": "a76f4615425e91c74c17e66b225f9d576193a821dec94093f9eba7842b7c83e3"
+    },
+    {
+      "path": "OrgLibTest/Encoding.lean",
+      "sha256": "51114b39ce79b7d362da459049ccfd2661ee61e9bd5ebbf82a81e0380e48d900"
+    },
+    {
+      "path": "OrgLibTest/EnsembleAPI.lean",
+      "sha256": "680361ca3f259fe76748ba11605b2e98920e7153f2d8181d8c57fa47b9dc6701"
+    },
+    {
+      "path": "OrgLibTest/EnsembleAxioms.lean",
+      "sha256": "2e2c227dfc883a44722b1e6b9553b5698ac1277677f6ca41d702680ee1e912f3"
+    },
+    {
+      "path": "OrgLibTest/HeadlineAxioms.lean",
+      "sha256": "d8f69d2f07a1e70b61f2a1cb8fc1b51d5e6ff099d43df7e54ecc3d887a06ce7b"
+    },
+    {
+      "path": "OrgLibTest/IndexedAPI.lean",
+      "sha256": "64dda12a63935871f0d2f031a55dadd89e102df0830e719a5fd8a4bb479032d8"
+    },
+    {
+      "path": "OrgLibTest/IndexedAxioms.lean",
+      "sha256": "e9fcedd9f5bc9ad56c96825732537706efc11b38a8484a14d44bd31bcea903ab"
+    },
+    {
+      "path": "OrgLibTest/ReindexAPI.lean",
+      "sha256": "c7ce328ea98ffbfede7ccbc0655d0892f8dfbe827748afa969a97958bfb91c9c"
+    },
+    {
+      "path": "OrgLibTest/SharedCyclicAPI.lean",
+      "sha256": "596638b3894c2beed4f6b9fefeb36217c7d4752e3c380fbbf586781f7b8739a2"
+    },
+    {
+      "path": "OrgLibTest/SharedCyclicAxioms.lean",
+      "sha256": "0ef181e8cd60a77b60510a16285ec0bd182eecd6d1e0a991cd4abbd58cd9c2eb"
+    },
+    {
+      "path": "OrgLibTest.lean",
+      "sha256": "197b946df312afbc1f771fc5c63ec93c001885d3ede94a878958eaf244ea955e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "be7dbc996a3e52ffe1da37ad9a846281866b8064dcbd6d3dbe022b47ed5a1cfb"
+    },
+    {
+      "path": "docs/CLAIMS.json",
+      "sha256": "1835b0a3c1a01f7015448f869dd141a9830d206225f59b3b89b0f27771e3e801"
+    },
+    {
+      "path": "docs/GETTING_STARTED.md",
+      "sha256": "ae3c21dc30085d7ee25cd64f6a66c1aa4dae75477930a61fcde6e4dd286c68a8"
+    },
+    {
+      "path": "docs/RIGHTS.md",
+      "sha256": "ab3ca2b095da47c244bab5be909f56995cd2c6c98cd76a48f19b22de3ee0f397"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "sha256": "8f75e373cb418da9eeb81359130e2e67f1982a1c302df226807c24ad204f6658"
+    },
+    {
+      "path": "docs/SOURCE_CORRESPONDENCE.json",
+      "sha256": "dfdc35a14287a066fe78fb716295e8c9e35f6dcc4efc2de3987e2611ad840e8e"
+    },
+    {
+      "path": "docs/THEOREMS.md",
+      "sha256": "a20f1e515167e4b8bd69a4666cb4b067853e86f5b49ca4eae8671f863d2bccc5"
+    },
+    {
+      "path": "docs/WORKFLOW.md",
+      "sha256": "c6def31bf9a6f4487893d5a6f45780bc2c0314390918bb0433c808efadd451df"
+    },
+    {
+      "path": "examples/external-client/.gitignore",
+      "sha256": "bae47b5d67dcb46217092d57d0e91ec92c22e9ca132745dd1d42a5c609b7e4f9"
+    },
+    {
+      "path": "examples/external-client/Client.lean",
+      "sha256": "f24e6a5a16506e380e6799104daa48017369c8d281bbfee69161ea98795b5ed3"
+    },
+    {
+      "path": "examples/external-client/README.md",
+      "sha256": "34ce1feec82d94e483afb51a245bd8f8bf3eb522f995e96ece6d0a11146c8356"
+    },
+    {
+      "path": "examples/external-client/lakefile.toml",
+      "sha256": "dc7611ce6b9dab510f6f4ba50957bd5b3011c0982a983f4feaf7e8e8321f78fb"
+    },
+    {
+      "path": "examples/external-client/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "examples/external-client/prepare_manifest.py",
+      "sha256": "238a9c0e386ba097ff0dd9823dfc0b6651952a3d37dcd32751bdd2bd20fc36f7"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "40902dc8f745b4fe3dfca37d397ccaf43aa2afd4d5b8395866b8c936aef43cb0"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "fdc887e6e10c4d97d1a566aecde1477282aa2ebfac909db8da389ed38238c0c0"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "scripts/check.py",
+      "sha256": "a70ead040e405e8a7f60253053c8add5b4e5706176328cc47d5dc237a9a83b85"
+    },
+    {
+      "path": "scripts/package_supplement.py",
+      "sha256": "9323cad3768a53a4b42ba2508c07a91691233b7dd932bfa8fe399e6e92ef3bc4"
+    },
+    {
+      "path": "supplements/README.md",
+      "sha256": "60eec4d5ecc37a96cb6d17cd41f7b470ce4ba9ee376ea065226ef9a3112b9ba0"
+    }
+  ],
+  "evidence_record_exclusions": [
+    "docs/CHECKS.json",
+    "docs/REVIEW.md"
+  ],
+  "exclusion_reason": "Current execution/review records are outputs, not mathematical build inputs; their source hashes would be circular",
+  "human_reviews": {
+    "model_domain": "pending",
+    "lean_library": "pending",
+    "foundational_definition_maintainer": "pending"
+  },
+  "preservation": "Previous milestone source/evidence retained in ignored private storage; no historical hashes rewritten",
+  "limits": [
+    "Raw quality only",
+    "Fixed configuration labels and topology",
+    "Continuous event lower bounds, not exact event probabilities",
+    "No organizational-dynamics or substantive simulation-impact theorem",
+    "Human source/model and library review pending"
+  ],
+  "publication_at_verification": {
+    "pushed": false,
+    "uploaded": false,
+    "caller_repository_commits": false
+  },
+  "publication_authorization": {
+    "date": "2026-11-01",
+    "repository_commit_and_push": "explicitly_requested_by_user",
+    "supplement_asset_upload": "not_requested",
+    "human_reviews": "pending"
+  },
+  "documentation_updates_after_verification": [
+    {
+      "path": "docs/RIGHTS.md",
+      "verified_snapshot_sha256": "ab3ca2b095da47c244bab5be909f56995cd2c6c98cd76a48f19b22de3ee0f397",
+      "current_sha256": "bd315b3d69332f977aff0dc63734f3003e6cd5f464209aca9992dda5bce948d7",
+      "change": "Publication-authorization wording only; mathematical sources and executable validation unchanged"
+    },
+    {
+      "path": "supplements/README.md",
+      "verified_snapshot_sha256": "60eec4d5ecc37a96cb6d17cd41f7b470ce4ba9ee376ea065226ef9a3112b9ba0",
+      "current_sha256": "388caf89271248bd48ccc2f0f6b2f96d5c377ba930635efd10391ba07c547e4f",
+      "change": "Publication-authorization wording only; mathematical sources and executable validation unchanged"
+    }
+  ],
+  "source_fingerprint_policy": "source_files identifies the tested snapshot; documentation_updates_after_verification records the only later source-file changes. Execution/review records are excluded as stated."
+}
