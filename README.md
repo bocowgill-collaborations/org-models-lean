@@ -5,9 +5,9 @@ models, proves their properties, and makes their relationships explicit—in the
 spirit of mathlib, cslib, physicslib, and MathEconLib.
 
 The prototype studies **NK quality landscapes**. Its canonical representation is
-a proposal following Felipe A. Csaszar's exposition of NK. The two applications
-use Scott C. Ganz's supplied papers and replication programs.
-[Sources and exact correspondence](docs/SOURCES.md).
+a proposal following [Felipe A. Csaszar's exposition of NK](https://doi.org/10.1186/s41469-018-0039-0).
+The two applications use extensions of the NK models
+[Sources and exact correspondence](https://github.com/bocowgill-collaborations/org-models-lean/blob/main/docs/SOURCES.md).
 
 ## Three demonstrations
 
