@@ -2,7 +2,10 @@
 
 A proof of concept for a community-developed library that specifies organizational
 models, proves their properties, and makes their relationships explicit—in the
-spirit of mathlib, cslib, physicslib, and MathEconLib.
+spirit of [mathlib](https://github.com/leanprover-community/mathlib4),
+[cslib](https://github.com/leanprover/cslib),
+[Physlib](https://github.com/leanprover-community/physlib), and
+[MathEconLib](https://github.com/matheconlib/matheconlib).
 
 The prototype studies **NK quality landscapes**. Its canonical representation is
 a proposal following [Felipe A. Csaszar's exposition of NK](https://doi.org/10.1186/s41469-018-0039-0).
