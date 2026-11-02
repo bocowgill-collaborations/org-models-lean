@@ -11,7 +11,7 @@ properties, and makes their relationships explicit—in the spirit of
 The prototype studies **NK quality landscapes**. Its canonical representation is
 a proposal following [Felipe A. Csaszar's exposition of NK](https://doi.org/10.1186/s41469-018-0039-0).
 The two applications use extensions of the NK models
-[Sources and exact correspondence](https://github.com/bocowgill-collaborations/org-models-lean/blob/main/docs/SOURCES.md).
+[Sources and exact correspondence](docs/SOURCES.md).
 
 ## Three demonstrations
 
@@ -29,11 +29,11 @@ attribution belongs in documentation and comments.
 ## Start from zero
 
 Install Git and Lean using the [official setup guide](https://lean-lang.org/install/).
-It installs the `elan` version manager and `lake` build command. Then run:
+It installs the `elan` version manager and `lake` build command. Download and
+extract the source ZIP, then open a terminal in its top-level directory (the
+folder containing `lean-toolchain`). Run:
 
 ```sh
-git clone https://github.com/bocowgill-collaborations/org-models-lean.git
-cd org-models-lean
 lake exe cache get
 lake build
 lake exe nk_demo

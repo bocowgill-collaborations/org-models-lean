@@ -16,15 +16,16 @@ If a command is missing, restart the terminal and finish the setup guide's PATH 
 
 ## Obtain and verify
 
+Download and extract the source ZIP, then open a terminal in its top-level
+directory (the folder containing `lean-toolchain`). An existing checkout works
+the same way. Run:
+
 ```sh
-git clone https://github.com/bocowgill-collaborations/org-models-lean.git
-cd org-models-lean
 lake exe cache get
 lake build
 lake exe nk_demo
 ```
 
-For a source archive, extract it and start at the cache command inside its directory.
 Keep `lean-toolchain` and `lake-manifest.json` unchanged. They pin Lean `v4.28.0`
 and all nine dependency revisions, including mathlib
 `8f9d9cff6bd728b17a24e163c9402775d9e6a365`. The first downloads require network
